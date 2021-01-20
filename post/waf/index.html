@@ -1,22 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/rabbitgithub/Archimonde886.github.io</id>
-    <title>Archimonde886</title>
-    <updated>2021-01-20T01:22:28.463Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://github.com/rabbitgithub/Archimonde886.github.io"/>
-    <link rel="self" href="https://github.com/rabbitgithub/Archimonde886.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://github.com/rabbitgithub/Archimonde886.github.io/images/avatar.png</logo>
-    <icon>https://github.com/rabbitgithub/Archimonde886.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Archimonde886</rights>
-    <entry>
-        <title type="html"><![CDATA[WAF]]></title>
-        <id>https://github.com/rabbitgithub/Archimonde886.github.io/post/waf/</id>
-        <link href="https://github.com/rabbitgithub/Archimonde886.github.io/post/waf/">
-        </link>
-        <updated>2021-01-20T01:04:26.000Z</updated>
-        <content type="html"><![CDATA[<p>什么是WAF？WAF是英文&quot;Web Application Firewall&quot;的缩写，中文意思是&quot;Web应用防火墙&quot;，也称为&quot;网站应用级入侵防御系统&quot;。WAF是集WEB防护、网页保护、负载均衡、应用交付于一体的WEB整体安全防护设备。WAF需要部署在Web服务器的前面，串行接入，不仅在硬件性能上要求高，而且不能影响Web服务，所以HA功能、Bypass功能都是必须的，而且还要与负载均衡、Web Cache等Web服务器前的常见的产品协调部署。<br>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>WAF | Archimonde886</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://github.com/rabbitgithub/Archimonde886.github.io/favicon.ico?v=1611104819410">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://github.com/rabbitgithub/Archimonde886.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://github.com/rabbitgithub/Archimonde886.github.io">
+        <img class="avatar" src="https://github.com/rabbitgithub/Archimonde886.github.io/images/avatar.png?v=1611104819410" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://github.com/rabbitgithub/Archimonde886.github.io">
+        <h1 class="site-title">Archimonde886</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">WAF</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-01-20</span>
+            
+          </div>
+          <div class="post-content">
+            <p>什么是WAF？WAF是英文&quot;Web Application Firewall&quot;的缩写，中文意思是&quot;Web应用防火墙&quot;，也称为&quot;网站应用级入侵防御系统&quot;。WAF是集WEB防护、网页保护、负载均衡、应用交付于一体的WEB整体安全防护设备。WAF需要部署在Web服务器的前面，串行接入，不仅在硬件性能上要求高，而且不能影响Web服务，所以HA功能、Bypass功能都是必须的，而且还要与负载均衡、Web Cache等Web服务器前的常见的产品协调部署。<br>
 WAF主要技术<br>
 WAF的主要技术是对入侵的检测能力，尤其是对Web服务入侵的检测能力。常见的实现形式包括代理服务、特征识别、算法识别、模式匹配。代理服务代理方式本身是一种安全网关，基于会话的双向代理，中断了用户与服务器的直接连接，适用于各种加密协议，这也是Web的Cache应用中最常用的技术。代理方式有效防止入侵者的直接进入，对DDOS攻击可以抑制，对非预料的“特别”行为也有所抑制。特征识别识别出入侵者是防护它的前提。特征就是攻击者的“指纹”，如缓冲区溢出时的Shellcode，SQL注入中常见的“真表达(1=1)”。应用信息没有“标准”，但每个软件、行为都有自己的特有属性，病毒与蠕虫的识别就采用此方式，麻烦的就是每种攻击都自己的特征，数量比较庞大，多了也容易相象，误报的可能性也大。虽然目前恶意代码的特征指数型地增长，安全界声言要淘汰此项技术，但目前应用层的识别还没有特别好的方式。算法识别特征识别有缺点，人们在寻求新的方式。对攻击类型进行归类，相同类的特征进行模式化，不再是单个特征的比较，算法识别有些类似模式识别，但对攻击方式依赖性很强，如SQL注入、DDOS、XSS等都开发了相应的识别算法。算法识别是进行语义理解，而不是靠“长相”识别。模式匹配IDS中“古老”的技术，把攻击行为归纳成一定模式，匹配后能确定是入侵行为。协议模式是其中简单的，是按标准协议的规程来定义模式，行为模式就复杂一些。最大挑战WAF最大的挑战是识别率，这并不是一个容易测量的指标，因为漏网进去的入侵者，并非都大肆张扬，比如给网页挂马，很难察觉进来的是哪一个，不知道当然也无法统计。对于已知的攻击方式，可以谈识别率；对未知的攻击方式，你也只好等他自己“跳”出来才知道。<br>
 WAF分类<br>
@@ -41,16 +111,58 @@ WAF的作用主要包括WEB防护和防止WEB信息泄露两大部分，具体�
 16.发现攻击锁定（发现攻击，锁定用户）<br>
 17.查杀毒<br>
 18.加密传输（http -&gt; https转化，即client-waf之间通过https，waf与server之间http）。URL ACL（URL匹配一些规则）。防止Web信息泄露银行卡（信用卡、借记卡）、社保卡、驾照等，采用覆盖和隐藏两种方式。敏感词过滤、Web中关键词（政治敏感词、技术关键词等）防止文件泄露（word、pdf等扩展文件及其关键词），Web服务器上的文件。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[#maybe]]></title>
-        <id>https://github.com/rabbitgithub/Archimonde886.github.io/post/maybe/</id>
-        <link href="https://github.com/rabbitgithub/Archimonde886.github.io/post/maybe/">
-        </link>
-        <updated>2021-01-19T07:28:59.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<!-- more -->
-]]></content>
-    </entry>
-</feed>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://github.com/rabbitgithub/Archimonde886.github.io/post/maybe/">
+              <h3 class="post-title">
+                下一篇：#maybe
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/rabbitgithub/Archimonde886.github.io" target="_blank">Gridea</a> | <a class="rss" href="https://github.com/rabbitgithub/Archimonde886.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
